@@ -12,7 +12,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      href="https://fontawesome.com/releases/v5.10.0/css/all.css"
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
@@ -23,9 +23,17 @@
     <h1>Weather Headquarters</h1>
     <div class="container-fluid mb-3">
       <div class="row">
-        <label>Enter a city name:</label>
+        <label>Enter a city name, then click the search icon:</label>
         <div class="input-group mb-3"></div>
+        <button class="btn btn-primary search" type="button" id="button-addon2">
+          <i class="fa-solid fa-magnifying-glass-location"></i>
+        </button>
       </div>
+      <div class="container cityHistory"></div>
     </div>
+    <script
+      src="https://kit.fontawesome.com/9572be782e.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
