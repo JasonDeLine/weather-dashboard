@@ -1,9 +1,12 @@
-var city = "Chicago";
-var date = moment().format("dddd, MMMM Do YYYY");
-var dateTime = moment().format("MM-DD-YYYY HH:MM:SS");
+var key = "64f2ee2a8261daa4d9f780f5b365f275";
+var city = "Denver";
 
-// save value of city search in array and local storage
-var cityHistory = [];
+//Grabs the current time and date
+var date = moment().format("dddd, MMMM Do YYYY");
+var dateTime = moment().format("YYYY-MM-DD HH:MM:SS");
+
+var cityHist = [];
+//Will save the text value of the search and save it to an array and storage
 $(".search").on("click", function (event) {
   event.preventDefault();
   city = $(this).parent(".btnPar").siblings(".textVal").val().trim();
@@ -18,8 +21,8 @@ $(".search").on("click", function (event) {
   getWeatherToday();
 });
 
-// create a button based on search history. button allows user to recheck a city they already searched for
-var contHistEl = $(".cityHistory");
+//Will create buttons based on search history
+var contHistEl = $(".cityHist");
 function getHistory() {
   contHistEl.empty();
 
@@ -37,7 +40,7 @@ function getHistory() {
   if (!city) {
     return;
   }
-  // allow search history button to repull same city
+  //Allows the buttons to start a search as well
   $(".histBtn").on("click", function (event) {
     event.preventDefault();
     city = $(this).text();
@@ -46,9 +49,9 @@ function getHistory() {
   });
 }
 
-//main today card
+//Grab the main 'Today' card body.
 var cardTodayBody = $(".cardBodyToday");
-//apply weather to the today card and then launches the five day forecast
+//Applies the weather data to the today card and then launches the five day forecast
 function getWeatherToday() {
   var getUrlCurrent = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${key}`;
 
@@ -175,7 +178,7 @@ function getFiveDayForecast() {
   });
 }
 
-//Allows for the example data to load for Chicago
+//Allows for the example data to load for Denver
 function initLoad() {
   var cityHistStore = JSON.parse(localStorage.getItem("city"));
 

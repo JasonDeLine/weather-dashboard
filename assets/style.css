@@ -1,5 +1,5 @@
 h1 {
-    background-color: rgb(152, 152, 152);
+    background-color: rgb(78, 152, 232);
     text-align: center;
 }
 
@@ -8,13 +8,18 @@ label {
     font-weight: bold;
     font-size: 20px;
 }
+
 .card {
     margin: 10px;
 }
 
 .colOne {
     background-color: white;
-    /* darkkhaki */
+
+}
+
+.colTwo {
+    background-color: rgb(255, 255, 255);
 }
 
 .histBtnRow {
@@ -41,6 +46,7 @@ label {
 .purple {
     background-color: purple;
 }
+
 .icons {
     height: 70px;
     width: 70px;
